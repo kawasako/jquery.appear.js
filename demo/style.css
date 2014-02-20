@@ -1,0 +1,19 @@
+* { margin: 0; padding: 0; }
+body {
+  margin: 0 auto;
+  padding-bottom: 600px;
+  width: 600px;
+  background-color: #333;
+}
+h1 { color: #fff; line-height: 400px; text-align: center; }
+.appear {
+  margin: 250px auto 0;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+  clear: right;
+}

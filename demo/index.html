@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>title</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="jquery.appear.js"></script>
+  <script>
+$(function(){
+  $('.appear').appearAnimate({
+    // before style
+    opacity: 0,
+    top: -50
+  },{
+    // after style
+    opacity: 1,
+    top: 0
+  }, 500, 'linear');
+
+  $('.appearend').appearFunction(function() {
+    // before function
+    return 'no function';
+  }, function() {
+    // after function
+    $('body').animate({
+      scrollTop: 0
+    });
+  });
+});
+  </script>
+</head>
+<body>
+  <h1>jquery.appear demo ↓↓</h1>
+  <div class="appear"></div>
+  <div class="appear"></div>
+  <div class="appear"></div>
+  <div class="appear"></div>
+  <div class="appear"></div>
+  <div class="appear"></div>
+  <div class="appearend"></div>
+</body>
+</html>
