@@ -1,3 +1,30 @@
-http://ja.wikipedia.org/wiki/%E5%B0%8F%E5%B3%B6%E3%82%88%E3%81%97%E3%81%8A
+jquery.appear.js
+=========================
+スクロールでイベント発火するjQueryプラグイン。1.10系で制作。
 
-> また、全身をブラブラさせながら体の各所をパーカッションのように叩き「ラッタラッタピーヤ ラスタピーヤ」などと踊り歌いつづけるものや、行進しながら「何の意味もない!! 何の意味もない!!」（締めは「ハイ、ズイズイズイー」）と叫ぶものもある[11]。
+How to use
+-----------------------
+    // 単純なアニメーションの場合
+    $('.appear-top').appearAnimate({
+      // 変化前のスタイルを記述
+      opacity: 0,
+      top: -10,
+      position: 'relative'
+    },{
+      // 変化後のスタイルを記述
+      opacity: 1,
+      top: 0
+    },{
+    　// アニメーションのオプションを記述
+    　duration: 600,
+    　easing: 'easeOutQuint'
+    });
+ 
+    // 自分で挙動を細かく定義したい場合
+    $('.appear-top').appearFunction(function($this){
+      // 要素の位置までスクロールされる前の記述
+      $this.hide();
+    }, function($this){
+      // 要素の位置までスクロールされた後の記述
+      $this.show();
+    });
